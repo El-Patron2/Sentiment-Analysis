@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Predict Page Styles */
+.predict-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+}
+
+.predict-container h1 {
+    text-align: center;
+    color: #ff6b6b;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.predict-container .sentiment {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+.predict-container .sentiment.positive {
+    color: #4caf50;
+    text-shadow: 2px 2px 4px rgba(76, 175, 80, 0.4);
+}
+
+.predict-container .sentiment.negative {
+    color: #f44336;
+    text-shadow: 2px 2px 4px rgba(244, 67, 54, 0.4);
+}
+
+.predict-container .sentiment.neutral {
+    color: #ffc107;
+    text-shadow: 2px 2px 4px rgba(255, 193, 7, 0.4);
+}
+
+.predict-container .product-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.predict-container .product-list li {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    animation: slideIn 1s ease;
+}
+
+.predict-container .product-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

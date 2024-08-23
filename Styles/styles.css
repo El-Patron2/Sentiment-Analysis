@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Login Page Styles */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.login-container .form-group {
+    margin-bottom: 20px;
+}
+
+.login-container .btn {
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.login-container .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Predict Page Styles */
+.predict-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+}
+
+.predict-container h1 {
+    text-align: center;
+    color: #28a745;
+    margin-bottom: 30px;
+}
+
+.predict-container .sentiment {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.predict-container .sentiment.positive {
+    color: #28a745;
+}
+
+.predict-container .sentiment.negative {
+    color: #dc3545;
+}
+
+.predict-container .sentiment.neutral {
+    color: #ffc107;
+}
+
+.predict-container .product-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.predict-container .product-list li {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.predict-container .product-list li:hover {
+    transform: translateY(-5px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
