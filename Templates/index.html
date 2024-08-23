@@ -1,0 +1,14 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Welcome to the Sentiment Analysis App</h1>
+<p>This application performs sentiment analysis on product reviews using machine learning techniques.</p>
+
+<h2>What is Sentiment Analysis?</h2>
+<p>Sentiment analysis, also known as opinion mining, is the process of determining the emotional tone behind a series of words, used to gain an understanding of the attitudes, opinions, and emotions expressed within an online mention.</p>
+
+<p>This application uses a logistic regression model trained on a dataset of product reviews to predict whether a given review is positive or negative.</p>
+
+<p>To get started, please <a href="{{ url_for('register') }}">register</a> or <a href="{{ url_for('login') }}">log in</a>.</p>
+{% endblock %}

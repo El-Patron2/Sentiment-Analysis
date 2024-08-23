@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles1.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="predict-container">
+        <h1>Sentiment Analysis</h1>
+        {% if sentiment %}
+            <div class="sentiment {{ sentiment.lower() }}">
+                The sentiment of the review is: {{ sentiment }} {{ emoji }}
+            </div>
+            <h2>Products with the predicted sentiment:</h2>
+            <ul class="product-list">
+                {% for _, product in products.iterrows() %}
+                <li>
+                    <h3>{{ product['product_title'] }}</h3>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <form method="POST" action="{{ url_for('predict') }}">
+                <div class="form-group">
+                    <label for="review_text">Enter a review:</label>
+                    <textarea class="form-control" id="review_text" name="review_text" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Predict Sentiment</button>
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}
